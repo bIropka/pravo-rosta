@@ -1,4 +1,6 @@
-@font-face {font-family: "Verdana";src: url("../fonts/Verdana.ttf");}
+@font-face {font-family: "Pragmatica Light";src: url("../fonts/pragmaticalightc.otf");}
+@font-face {font-family: "Pragmatica Bold";src: url("../fonts/pragmaticalightc-bold.otf");}
+@font-face {font-family: "Pragmatica Condensed";src: url("../fonts/pragmatica-condensed.ttf");}
 @font-face {font-family: "Micra Bold";src: url("../fonts/micra-bold.ttf");}
 
 * {
@@ -7,7 +9,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Verdana", sans-serif;
+    font-family: "Pragmatica Light", sans-serif;
     font-size: 20px;
     color: #333333;
     -webkit-user-select: none;
@@ -53,6 +55,12 @@ body {
     color: #b80000;
     width: auto;
 }
+.taglines .text-2 {
+    font-family: "Pragmatica Condensed", sans-serif;
+    font-size: 36px;
+    color: #004f74;
+    width: auto;
+}
 nav {
     display: table;
     float: right;
@@ -66,7 +74,7 @@ nav ul li {
     border-right: 4px solid #e2e2e3;
     text-align: center;
     vertical-align: middle;
-    width: 20%;
+    width: 16%;
     font-size: 18px;
     height: 70px;
     cursor: pointer;
@@ -80,28 +88,112 @@ nav ul li:hover {
     margin: 0 auto;
 }
 .title {
+    font-family: "Pragmatica Bold", sans-serif;
     width: auto;
     margin: 2% 0;
     text-align: center;
     font-size: 48px;
-    font-style: italic;
 }
-.you-will-learn, .book-can-help, .you-will-get {width: 100%;display: flex;}
+.you-will-learn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
 .you-will-learn .block-picture {
     display: inline-block;
-    width: 26.015625%;
-    padding-top: 36.796875%;
+    width: 30.5%;
+    padding-top: 43%;
     background: url('../images/freedom.jpg');
     background-size: cover;
-    vertical-align: top;
 }
 .you-will-learn .block-text {
-    display: inline-flex;
-    width: 70%;
-    flex-direction: column;
-    justify-content: space-between;
+    display: inline-block;
+    width: 66%;
+    margin-left: 3%;
 }
-.you-will-learn .sub-title {font-weight: 600; text-decoration: underline;}
+.sub-title {
+    font-size: 24px;
+    text-decoration: underline;
+    font-family: "Pragmatica Bold", sans-serif;
+    margin-bottom: 5px;
+}
+.you-will-learn ul li {
+    display: inline-block;
+}
+.you-will-learn .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-top: 15px;
+    background: url('../images/mark.png');
+    background-size: cover;
+}
+.you-will-learn .text-1 {
+    display: inline-block;
+    width: 90%;
+    font-size: 22px;
+    vertical-align: middle;
+    margin-top: 20px;
+    font-family: "Pragmatica Bold", sans-serif;
+}
+.you-will-learn .text-2 {
+    display: inline-block;
+    width: 95%;
+    margin-left: 35px;
+    margin-top: 5px;
+    text-align: justify;
+}
+.download-contents {
+    display: inline-block;
+    background: url('../images/button.png');
+    background-size: cover;
+    font-family: "Pragmatica Condensed", sans-serif;
+    font-size: 28px;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin: 5% 0 7% 36%;
+}
+.book-can-help, .you-will-get {
+    width: 47.5%;
+    float: left;
+}
+.book-can-help img, .you-will-get img {width: 100%;height: auto;}
+.you-will-get {float: right;}
+.book-can-help .sub-title, .you-will-get .sub-title {
+    width: 100%;
+    margin: 5% 0;
+    text-align: center;
+}
+.book-can-help ul, .you-will-get ul {
+    list-style-type: disc;
+    margin-left: 10%;
+    text-align: justify;
+}
+.book-can-help ul li, .you-will-get ul li {
+    margin-top: 10px;
+}
+.reviews {
+    margin: 5% 0;
+}
+.reviews ul li {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5%;
+}
+.reviews .author, .reviews .review {
+    display: inline-block;
+    width: 30%;
+    float: left;
+}
+.reviews .review {
+    width: 65%;
+    float: right;
+    text-align: justify;
+}
+
+
+
 @media (max-width: 1600px) {
     .taglines .text-1 {font-size: 36px;}
     .title {font-size: 36px;}
