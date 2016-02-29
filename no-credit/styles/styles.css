@@ -1,6 +1,7 @@
 @font-face {font-family: "Pragmatica Light";src: url("../fonts/pragmaticalightc.otf");}
+@font-face {font-family: "Pragmatica Regular";src: url("../fonts/pragmatica-condensed.ttf");}
 @font-face {font-family: "Pragmatica Bold";src: url("../fonts/pragmaticalightc-bold.otf");}
-@font-face {font-family: "Pragmatica Condensed";src: url("../fonts/pragmatica-condensed.ttf");}
+@font-face {font-family: "Engma";src: url("../fonts/Enigma.TTF");}
 @font-face {font-family: "Micra Bold";src: url("../fonts/micra-bold.ttf");}
 
 * {
@@ -9,7 +10,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Pragmatica Light", sans-serif;
+    font-family: "Pragmatica Regular", sans-serif;
     font-size: 20px;
     color: #333333;
     -webkit-user-select: none;
@@ -28,6 +29,10 @@ body {
     width: 100%;
     text-align: right;
     padding: 1% 0;
+    background: #f9f8f8;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 .pr-logo, .ca-logo {
     display: inline-block;
@@ -56,7 +61,7 @@ body {
     width: auto;
 }
 .taglines .text-2 {
-    font-family: "Pragmatica Condensed", sans-serif;
+    font-family: "Engma", sans-serif;
     font-size: 36px;
     color: #004f74;
     width: auto;
@@ -66,12 +71,11 @@ nav {
     float: right;
     width: 42%;
     margin-right: 5%;
-    margin-top: 0.5%;
+    margin-top: 1%;
 }
 nav ul {display: table-row;}
 nav ul li {
     display: table-cell;
-    border-right: 4px solid #e2e2e3;
     text-align: center;
     vertical-align: middle;
     width: 16%;
@@ -79,12 +83,16 @@ nav ul li {
     height: 70px;
     cursor: pointer;
 }
-nav ul li:first-child {border-left: 4px solid #e2e2e3;}
 nav ul li:hover {
-    background: linear-gradient(to top, #f9f8f8 3%, #d8d9da 50%, #f9f8f8 97%);
+    text-decoration: underline;
+}
+.about-book {
+    background: #f8f6f5;
+    padding: 3% 0;
+    margin-top: 10%;
 }
 .content-block {
-    width: 1280px;
+    width: 1100px;
     margin: 0 auto;
 }
 .title {
@@ -100,12 +108,9 @@ nav ul li:hover {
     align-items: center;
 }
 .you-will-learn .block-picture {
-    display: inline-block;
-    width: 30.5%;
-    padding-top: 43%;
-    background: url('../images/freedom.jpg');
-    background-size: cover;
+    width: 31%;
 }
+.you-will-learn .block-picture img {width: 100%; height: auto;}
 .you-will-learn .block-text {
     display: inline-block;
     width: 66%;
@@ -148,7 +153,7 @@ nav ul li:hover {
     display: inline-block;
     background: url('../images/button.png');
     background-size: cover;
-    font-family: "Pragmatica Condensed", sans-serif;
+    font-family: "Engma", sans-serif;
     font-size: 28px;
     text-decoration: none;
     padding: 15px 20px;
@@ -174,7 +179,7 @@ nav ul li:hover {
     margin-top: 10px;
 }
 .reviews {
-    margin: 5% 0;
+    margin: 3% 0 5%;
 }
 .reviews ul li {
     display: inline-block;
@@ -186,14 +191,103 @@ nav ul li:hover {
     width: 30%;
     float: left;
 }
+.reviews .author .name {
+    font-family: "Pragmatica Bold", sans-serif;
+    margin-bottom: 10px;
+}
+.reviews .author .info {
+    margin-left: 10px;
+    font-family: "Pragmatica Bold", sans-serif;
+    line-height: 26px;
+}
+.reviews .author .info a {font-family: "Pragmatica Bold", sans-serif;}
 .reviews .review {
     width: 65%;
     float: right;
     text-align: justify;
+    background: #f7f8fa;
+    border: 2px solid #d8d9db;
+    text-indent: 5%;
+    padding: 2%;
+    position: relative;
+    line-height: 24px;
 }
-
-
-
+.reviews .review .text-mark {
+    position: absolute;
+    top: -10px;
+    left: 1%;
+    width: 6%;
+    padding-top: 4%;
+    background: url('../images/text-mark.png');
+    background-size: cover;
+}
+.about-author {
+    width: 100%;
+    background: #e6e5ea;
+    padding: 2% 0 5%;
+    margin-bottom: 3%;
+}
+.about-author .content-block {
+    display: flex;
+    align-items: center;
+}
+.about-author .author-info {
+    margin-left: 8%;
+    font-size: 24px;
+}
+.about-author .author-info .author-name {
+    font-family: "Pragmatica Bold", sans-serif;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+.about-author .author-info p {line-height: 30px;}
+.question-answer {
+    width: 100%;
+}
+.question-answer ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0 5%;
+}
+.question-answer ul li {
+    display: inline-block;
+    width: 100%;
+    border: 2px solid #d8d9db;
+    border-bottom: none;
+    padding: 15px 25px;
+    font-size: 22px;
+    background: #f8f6f5;
+    position: relative;
+}
+.question-answer ul li:last-child {border-bottom: 2px solid #d8d9db;}
+.question-answer .question {
+    font-size: 24px;
+    font-family: "Pragmatica Bold", sans-serif;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.question-answer .answer {
+    display: none;
+    margin-top: 20px;
+    line-height: 30px;
+    text-indent: 30px;
+    text-align: justify;
+}
+.question-answer .icon-arrow {
+    width: 40px;
+    padding-top: 40px;
+    position: absolute;
+    top: 7px;
+    right: 15px;
+}
+.question-answer .to-right {
+    background: url('../images/arrow-sprite.png') 0 center no-repeat;
+    background-size: cover;
+}
+.question-answer .to-bottom {
+    background: url('../images/arrow-sprite.png') 100% center no-repeat;
+    background-size: cover;
+}
 @media (max-width: 1600px) {
     .taglines .text-1 {font-size: 36px;}
     .title {font-size: 36px;}
