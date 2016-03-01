@@ -279,6 +279,7 @@ nav ul li:hover {
     position: absolute;
     top: 7px;
     right: 15px;
+    cursor: pointer;
 }
 .question-answer .to-right {
     background: url('../images/arrow-sprite.png') 0 center no-repeat;
@@ -288,6 +289,55 @@ nav ul li:hover {
     background: url('../images/arrow-sprite.png') 100% center no-repeat;
     background-size: cover;
 }
+.in-touch {
+    width: 100%;
+    background: #f3f2f3;
+    padding: 2% 0 4%;
+}
+.in-touch form {
+    width: 100%;
+    margin-top: 3%;
+    background: #c7c6ca;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.in-touch input {
+    margin: 20px 0;
+    width: 240px;
+    height: 50px;
+}
+.how-to-buy {
+    width: 100%;
+    padding: 2% 0 4%;
+}
+.get-free, .to-buy {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.get-free p, .to-buy p {
+    text-align: left;
+    display: inline-block;
+    width: 80%;
+    margin: 2% auto;
+}
+.to-buy {
+     float: right;
+ }
+.free-icon, .to-buy-icon {
+    display: inline-block;
+    width: 50%;
+    padding-top: 50%;
+    background: url('../images/sprite.png') -4% center no-repeat;
+    background-size: cover;
+    margin: 10% 0;
+}
+.to-buy-icon {
+    background: url('../images/sprite.png') 100% center;
+    background-size: cover;
+}
+
 @media (max-width: 1600px) {
     .taglines .text-1 {font-size: 36px;}
     .title {font-size: 36px;}

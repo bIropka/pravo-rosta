@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    $('.question').click(
+    $('.question-answer li').click(
         function() {
-            var esAnswer = $(this).parent().find('.answer');
-            var esIconArrow = $(this).parent().find('.icon-arrow');
+            var esAnswer = $(this).find('.answer');
+            var esIconArrow = $(this).find('.icon-arrow');
             if(esAnswer.hasClass('hidden')){
                 esAnswer.removeClass('hidden');
                 esAnswer.fadeIn();
