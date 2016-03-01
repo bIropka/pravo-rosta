@@ -1,7 +1,8 @@
 @font-face {font-family: "Pragmatica Light";src: url("../fonts/pragmaticalightc.otf");}
+@font-face {font-family: "Europe Normal";src: url("../fonts/EuropeNormal.ttf");}
 @font-face {font-family: "Pragmatica Regular";src: url("../fonts/pragmatica-condensed.ttf");}
 @font-face {font-family: "Pragmatica Bold";src: url("../fonts/pragmaticalightc-bold.otf");}
-@font-face {font-family: "Engma";src: url("../fonts/Enigma.TTF");}
+@font-face {font-family: "Enigma";src: url("../fonts/Enigma.TTF");}
 @font-face {font-family: "Micra Bold";src: url("../fonts/micra-bold.ttf");}
 
 * {
@@ -27,64 +28,66 @@ body {
 }
 .header {
     width: 100%;
-    text-align: right;
     padding: 1% 0;
     background: #f9f8f8;
     position: fixed;
     top: 0;
     z-index: 1;
-}
-.pr-logo, .ca-logo {
-    display: inline-block;
-    width: 13.02083333333333%;
-    padding-top: 3.75%;
-    background: url('../images/pr-logo.png');
-    background-size: cover;
-    outline: none;
-    margin-right: 2%;
-}
-.ca-logo {
-    background: url('../images/ca-logo.png');
-    background-size: cover;
-    margin-right: 5%;
+    text-align: center;
 }
 .taglines {
+    display: inline-block;
     float: left;
-    margin-left: 5%;
-    vertical-align: bottom;
+    margin-left: 2%;
 }
 .taglines .text-1 {
     font-family: "Micra Bold", sans-serif;
-    font-size: 48px;
+    font-size: 32px;
     text-transform: uppercase;
     color: #b80000;
     width: auto;
 }
 .taglines .text-2 {
-    font-family: "Engma", sans-serif;
-    font-size: 36px;
+    font-family: "Enigma", sans-serif;
+    font-size: 25px;
     color: #004f74;
     width: auto;
 }
 nav {
-    display: table;
-    float: right;
-    width: 42%;
-    margin-right: 5%;
-    margin-top: 1%;
+    display: inline-block;
+    width: 35%;
 }
-nav ul {display: table-row;}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 nav ul li {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    width: 16%;
-    font-size: 18px;
-    height: 70px;
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
     cursor: pointer;
+    font-family: "Europe Normal", sans-serif;
+    text-align: center;
 }
 nav ul li:hover {
     text-decoration: underline;
+}
+.logos {
+    display: inline-block;
+    width: 20%;
+}
+.pr-logo, .ca-logo {
+    display: inline-block;
+    width: 40%;
+    padding-top: 12%;
+    background: url('../images/pr-logo.png');
+    background-size: cover;
+    outline: none;
+}
+.ca-logo {
+    background: url('../images/ca-logo.png');
+    background-size: cover;
 }
 .about-book {
     background: #f8f6f5;
@@ -153,7 +156,7 @@ nav ul li:hover {
     display: inline-block;
     background: url('../images/button.png');
     background-size: cover;
-    font-family: "Engma", sans-serif;
+    font-family: "Enigma", sans-serif;
     font-size: 28px;
     text-decoration: none;
     padding: 15px 20px;
