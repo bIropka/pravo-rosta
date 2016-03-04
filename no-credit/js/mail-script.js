@@ -10,15 +10,11 @@ $(document).ready(function () {
             data: formNm.serialize(),
             success: function (data) {
                 // Вывод текста результата отправки
-                //$(formNm).html(data);
-                $('.error-message').css('display', 'none');
-                $('.success-message').fadeIn();
+                $('.message').html(data);
             },
             error: function (jqXHR, text, error) {
                 // Вывод текста ошибки отправки
-                //$(formNm).html(error);
-                $('.success-message').css('display', 'none');
-                $('.error-message').fadeIn();
+                $('.message').html(error);
             }
         });
         return false;

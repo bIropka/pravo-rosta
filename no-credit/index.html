@@ -281,17 +281,15 @@
 <div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
     <div class="content-block">
         <div class="title">Получить консультацию<br> по банкротству и списанию долгов у автора</div>
-        <form id="form">
+        <form id="form" action="mail.php">
             <label><input type="text" class="putName" name="name" placeholder="Имя" required></label>
             <label><input name="phone" type="tel" class="putPhone" placeholder="Телефон" required></label>
             <label><input type="email" name="email" class="putEmail" placeholder="Email" required></label>
             <label><input type="submit" name="submit" class="btn" value="Отправить запрос"></label>
             <input type="hidden" name="formData" value="Заявка с сайта">
-            <div class="message success-message"></div>
-            <div class="message error-message"></div>
+            <div class="message"></div>
         </form>
     </div>
-
 </div>
 
 
@@ -328,6 +326,7 @@
 </div>
 
 <script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/mail-script.js"></script>
 <script src="js/custom-scripts.js"></script>
 </body>
 </html>

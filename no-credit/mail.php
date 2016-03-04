@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['name'])) {$name = $_POST['name'];}
     if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
-    if (isset($_POST['email'])) {$phone = $_POST['email'];}
+    if (isset($_POST['email'])) {$email = $_POST['email'];}
     if (isset($_POST['formData'])) {$formData = $_POST['formData'];}
 
     $to = "biropka@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
@@ -12,11 +12,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html;charset=utf-8 \r\n";
     $subject = "$formData";
-    $message = "$formData<br> <b>Имя пославшего:</b> $name <br><b>Телефон:</b> $phone <br><b>Email:</b> $email";
+    $message = "$formData<br> <b>Имя пославшего:</b> $name <br><b>Телефон:</b> $phone <br><b>Email:</b> $email ";
     $send = mail ($to, $subject, $message, $headers);
     if ($send == 'true')
     {
-    echo '<p class="success">Спасибо за отправку вашего сообщения!</p>';
+    echo '<p class="success">Спасибо за обращение к нам!</p>';
     }
     else 
     {
