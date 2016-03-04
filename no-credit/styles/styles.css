@@ -76,6 +76,8 @@ nav ul li:hover {
 .logos {
     display: inline-block;
     width: 20%;
+    float: right;
+    margin-right: 2%;
 }
 .pr-logo, .ca-logo {
     display: inline-block;
@@ -154,19 +156,36 @@ nav ul li:hover {
 }
 .download-contents {
     display: inline-block;
-    background: url('../images/button.png');
+    background: #798fb1;
+    background: linear-gradient(to top, #798fb1, #95b2e2);
     background-size: cover;
     font-family: "Enigma", sans-serif;
     font-size: 28px;
     text-decoration: none;
     padding: 15px 20px;
     margin: 5% 0 7% 36%;
+    color: #ffffff;
+    border: 1px solid #7497d0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 10px;
+    outline: none;
+}
+.download-contents:hover {
+    background: #95b2e2;
+    background: linear-gradient(to bottom, #798fb1, #95b2e2);
+}
+.book-promo {
+    width: 100%;
+    background: #f0f1f3;
+    padding: 3% 0;
 }
 .book-can-help, .you-will-get {
     width: 47.5%;
     float: left;
+    text-align: center;
 }
-.book-can-help img, .you-will-get img {width: 100%;height: auto;}
+.book-can-help img, .you-will-get img {width: 65%;margin: 0 auto;height: auto;}
 .you-will-get {float: right;}
 .book-can-help .sub-title, .you-will-get .sub-title {
     width: 100%;
@@ -294,21 +313,44 @@ nav ul li:hover {
 }
 .remodal {
     width: 100%;
-    background: #f3f2f3;
+    background: #f2f3ed;
     padding: 2% 0 4%;
+
 }
 .remodal form {
     width: 100%;
     margin-top: 3%;
-    background: #c7c6ca;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background: #e0e6cf;
+    border: 1px solid #88a93e;
 }
 .remodal input {
     margin: 20px 0;
     width: 240px;
     height: 50px;
+    outline: none;
+    border: none;
+    -webkit-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1);
+    -moz-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1);
+    box-shadow: inset 0 0 10px 0 rgba(136,169,62,1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+.remodal .btn {
+    outline: none;
+    -webkit-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
+    -moz-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
+    box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #a5bd6c;
+    background: linear-gradient(to top, #a5bd6c, #c6da90);
+    border: 2px solid #e7eec1;
 }
 .how-to-buy {
     width: 100%;
