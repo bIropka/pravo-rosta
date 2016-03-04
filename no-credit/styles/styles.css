@@ -86,7 +86,7 @@ nav ul li:hover {
     outline: none;
 }
 .ca-logo {
-    background: url('../images/ca-logo.png');
+    /*background: url('../images/ca-logo.png');*/
     background-size: cover;
 }
 .about-book {
@@ -292,12 +292,12 @@ nav ul li:hover {
     background: url('../images/arrow-sprite.png') 100% center no-repeat;
     background-size: cover;
 }
-.in-touch {
+.remodal {
     width: 100%;
     background: #f3f2f3;
     padding: 2% 0 4%;
 }
-.in-touch form {
+.remodal form {
     width: 100%;
     margin-top: 3%;
     background: #c7c6ca;
@@ -305,7 +305,7 @@ nav ul li:hover {
     justify-content: space-around;
     align-items: center;
 }
-.in-touch input {
+.remodal input {
     margin: 20px 0;
     width: 240px;
     height: 50px;
