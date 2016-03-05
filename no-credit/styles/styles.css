@@ -602,7 +602,7 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     .sub-title {font-size: 18px;}
     .you-will-learn .text-1 {font-size: 14px;}
     .taglines {float: right;margin: 1% 0 2% 5%;}
-    .logos {float: right;width: 40%;margin-right: 5%;}
+    .logos {float: right;width: 50%;margin-right: 5%;}
     nav {
         display: inline-block;
         vertical-align:top;
@@ -662,4 +662,42 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     .taglines .text-1 {font-size: 18px;}
     .taglines .text-2 {font-size: 14px;}
     .to-buy-now {font-size: 16px; width: 60%;}
+    .text-mark {display: none;}
+}
+@media (max-width: 540px) {
+    .about-book {margin-top: 25%;}
+    .you-will-learn .picture-block {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 80%;
+        margin-right: 20%;
+    }
+    .you-will-learn .block-text {
+        width: 90%;
+        margin: 2% 5% 0;
+        text-align: justify;
+        position: static;
+        z-index: 0;
+    }
+    .taglines {
+        width: 100%;
+        margin: 1% 0 5%;
+        text-align: center;
+    }
+    .logos {
+        width: 65%;
+        text-align: center;
+    }
+    nav {margin-top: -5px;}
+    nav ul li a {font-size: 8px;}
+    .remodal form {width: 80%; margin-left: 10%;}
+    .question-answer ul {width: 100%;}
+    .question-answer ul li {padding: 15px 0;}
+    .question-answer .question {font-size: 10px;}
+    .question-answer .icon-arrow {right: 3px;}
+    .about-author .author-info {width: 55%;margin-left: 0;}
+    .reviews .author {margin-left: 5px;}
+    .reviews .author .info {margin-left: 8px;line-height: 16px;}
+    .reviews .review {width:60%;margin-right: 5px;}
 }

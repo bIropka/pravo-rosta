@@ -48,6 +48,6 @@ $(document).ready(function () {
 
     setTimeout(function(){
         $('.you-will-learn .picture-block').fadeIn(3000);
-    },1000);
+    },1500);
 
 });
