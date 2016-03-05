@@ -46,4 +46,8 @@ $(document).ready(function () {
         if ($target.hasClass('.cancel')) $('.window-payment').fadeOut();
     });
 
+    setTimeout(function(){
+        $('.you-will-learn .picture-block').fadeIn(3000);
+    },1000);
+
 });
