@@ -4,6 +4,10 @@
 @font-face {font-family: "Pragmatica Bold";src: url("../fonts/pragmaticalightc-bold.otf");}
 @font-face {font-family: "Enigma";src: url("../fonts/Enigma.TTF");}
 @font-face {font-family: "Micra Bold";src: url("../fonts/micra-bold.ttf");}
+@font-face {font-family: "OpenSans Light";src: url("../fonts/OpenSans-Light.ttf");}
+@font-face {font-family: "OpenSans Semibold";src: url("../fonts/OpenSans-Semibold.ttf");}
+@font-face {font-family: "OpenSans Regular";src: url("../fonts/OpenSans-Regular.ttf");}
+@font-face {font-family: "OpenSans Bold";src: url("../fonts/OpenSans-Bold.ttf");}
 
 * {
     margin: 0;
@@ -11,8 +15,8 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: "Pragmatica Regular", sans-serif;
-    font-size: 20px;
+    font-family: "OpenSans Regular", sans-serif;
+    font-size: 16px;
     color: #333333;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -28,17 +32,19 @@ body {
 }
 .header {
     width: 100%;
-    padding: 1% 0;
     background: #f9f8f8;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     text-align: center;
+    padding: 0.5% 0;
+    border-bottom: 2px solid #cccccc;
 }
 .taglines {
     display: inline-block;
     float: left;
     margin-left: 2%;
+    vertical-align: top;
 }
 .taglines .text-1 {
     font-family: "Micra Bold", sans-serif;
@@ -55,7 +61,16 @@ body {
 }
 nav {
     display: inline-block;
+    vertical-align: top;
     width: 35%;
+    margin-top: 0.6%;
+}
+.menu-icon {
+    display: none;
+    width: 100%;
+    height: auto;
+    outline: none;
+    margin-top: 1%;
 }
 nav ul {
     display: flex;
@@ -65,61 +80,78 @@ nav ul {
 nav ul li {
     display: inline-block;
     width: auto;
-    font-size: 16px;
     cursor: pointer;
-    font-family: "Europe Normal", sans-serif;
     text-align: center;
 }
-nav ul li:hover {
+nav ul li a {
+    font-family: "Europe Normal", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    text-decoration: none;
+}
+nav ul li:focus {
     text-decoration: underline;
 }
+nav ul li:active {text-decoration: none;}
 .logos {
     display: inline-block;
+    vertical-align: top;
     width: 20%;
     float: right;
     margin-right: 2%;
+    margin-top: 0.5%;
 }
 .pr-logo, .ca-logo {
     display: inline-block;
-    width: 40%;
-    padding-top: 12%;
-    background: url('../images/pr-logo.png');
+    width: 45.4%;
+    padding-top: 13%;
+    background: url('../images/logo-pr.png') no-repeat;
     background-size: cover;
     outline: none;
+    float: left;
 }
 .ca-logo {
-    /*background: url('../images/ca-logo.png');*/
+    width: 40%;
+    padding-top: 13%;
+    background: url('../images/logo-sa.png');
     background-size: cover;
+    float: right;
 }
 .about-book {
-    background: #f8f6f5;
-    padding: 3% 0;
-    margin-top: 10%;
+    padding: 3% 0 0;
+    margin-top: 3%;
 }
 .content-block {
-    width: 1100px;
+    width: 980px;
     margin: 0 auto;
 }
 .title {
     font-family: "Pragmatica Bold", sans-serif;
     width: auto;
-    margin: 2% 0;
+    margin: 2% 0 3%;
     text-align: center;
-    font-size: 48px;
+    font-size: 36px;
 }
 .you-will-learn {
     width: 100%;
-    display: flex;
-    align-items: center;
+    position: relative;
+    text-align: right;
+    margin-top: 4%;
 }
-.you-will-learn .block-picture {
-    width: 31%;
+.you-will-learn .picture-block {
+    position: absolute;
+    top: -8%;
+    left: -15%;
+    width: 65%;
 }
-.you-will-learn .block-picture img {width: 100%; height: auto;}
 .you-will-learn .block-text {
     display: inline-block;
-    width: 66%;
-    margin-left: 3%;
+    width: 45%;
+    margin-top: 2%;
+    margin-right: 3%;
+    text-align: left;
+    position: relative;
+    z-index: 1;
 }
 .sub-title {
     font-size: 24px;
@@ -132,8 +164,8 @@ nav ul li:hover {
 }
 .you-will-learn .icon {
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     vertical-align: middle;
     margin-top: 15px;
     background: url('../images/mark.png');
@@ -142,7 +174,7 @@ nav ul li:hover {
 .you-will-learn .text-1 {
     display: inline-block;
     width: 90%;
-    font-size: 22px;
+    font-size: 18px;
     vertical-align: middle;
     margin-top: 20px;
     font-family: "Pragmatica Bold", sans-serif;
@@ -150,20 +182,21 @@ nav ul li:hover {
 .you-will-learn .text-2 {
     display: inline-block;
     width: 95%;
-    margin-left: 35px;
+    margin-left: 25px;
     margin-top: 5px;
     text-align: justify;
+    font-size: 14px;
 }
 .download-contents {
     display: inline-block;
     background: #798fb1;
     background: linear-gradient(to top, #798fb1, #95b2e2);
     background-size: cover;
-    font-family: "Enigma", sans-serif;
+    font-family: "Europe Normal", sans-serif;
     font-size: 28px;
     text-decoration: none;
     padding: 15px 20px;
-    margin: 5% 0 7% 36%;
+    margin: 7% 0 3% 36%;
     color: #ffffff;
     border: 1px solid #7497d0;
     -webkit-border-radius: 20px;
@@ -174,6 +207,12 @@ nav ul li:hover {
 .download-contents:hover {
     background: #95b2e2;
     background: linear-gradient(to bottom, #798fb1, #95b2e2);
+}
+.download-contents:active {
+    background: #798fb1;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
 }
 .book-promo {
     width: 100%;
@@ -201,61 +240,70 @@ nav ul li:hover {
     margin-top: 10px;
 }
 .reviews {
-    margin: 3% 0 5%;
+    padding: 2% 0;
+}
+.reviews ul {
+    width: 100%;
+    background: url('../images/paper.png') no-repeat;
+    background-size: cover;
+    margin-top: 5%
 }
 .reviews ul li {
     display: inline-block;
     width: 100%;
-    margin-top: 5%;
+    position: relative;
 }
-.reviews .author, .reviews .review {
+
+.reviews ul li:first-child {margin-top: 23%;}
+.reviews ul li:last-child {margin-bottom: 15%;margin-top: 5%;}
+.reviews .author {
     display: inline-block;
     width: 30%;
     float: left;
+    margin-left: 12.5%;
 }
 .reviews .author .name {
-    font-family: "Pragmatica Bold", sans-serif;
+    font-family: "OpenSans Bold", sans-serif;
     margin-bottom: 10px;
 }
 .reviews .author .info {
     margin-left: 10px;
-    font-family: "Pragmatica Bold", sans-serif;
-    line-height: 26px;
+    font-family: "OpenSans Bold", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
 }
-.reviews .author .info a {font-family: "Pragmatica Bold", sans-serif;}
+.reviews .author .info a {font-family: "OpenSans Bold", sans-serif;}
 .reviews .review {
-    width: 65%;
+    display: inline-block;
+    width: 45%;
+    margin-right: 12.5%;
     float: right;
     text-align: justify;
-    background: #f7f8fa;
-    border: 2px solid #d8d9db;
+    background: #f1f1f1;
+    border: 3px solid #81a432;
     text-indent: 5%;
     padding: 2%;
     position: relative;
-    line-height: 24px;
 }
-.reviews .review .text-mark {
-    position: absolute;
-    top: -10px;
-    left: 1%;
-    width: 6%;
-    padding-top: 4%;
-    background: url('../images/text-mark.png');
-    background-size: cover;
+.reviews .review p {
+    font-size: 14px;
+    line-height: 20px;
 }
 .about-author {
     width: 100%;
     background: #e6e5ea;
     padding: 2% 0 5%;
-    margin-bottom: 3%;
 }
 .about-author .content-block {
     display: flex;
     align-items: center;
 }
+.about-author .author-photo {
+    width: 35%;
+}
+.about-author .author-photo img {width: 100%; height: auto;}
 .about-author .author-info {
     margin-left: 8%;
-    font-size: 24px;
 }
 .about-author .author-info .author-name {
     font-family: "Pragmatica Bold", sans-serif;
@@ -265,11 +313,11 @@ nav ul li:hover {
 .about-author .author-info p {line-height: 30px;}
 .question-answer {
     width: 100%;
+    padding: 2% 0 5%;
 }
 .question-answer ul {
     width: 80%;
     margin: 0 auto;
-    padding: 2% 0 5%;
 }
 .question-answer ul li {
     display: inline-block;
@@ -277,14 +325,13 @@ nav ul li:hover {
     border: 2px solid #d8d9db;
     border-bottom: none;
     padding: 15px 25px;
-    font-size: 22px;
     background: #f8f6f5;
     position: relative;
 }
 .question-answer ul li:last-child {border-bottom: 2px solid #d8d9db;}
 .question-answer .question {
-    font-size: 24px;
-    font-family: "Pragmatica Bold", sans-serif;
+    font-size: 18px;
+    font-family: "Pragmatica Regular", sans-serif;
     cursor: pointer;
     margin-left: 30px;
 }
@@ -315,7 +362,6 @@ nav ul li:hover {
     width: 100%;
     background: #f2f3ed;
     padding: 2% 0 4%;
-
 }
 .remodal form {
     width: 100%;
@@ -325,10 +371,14 @@ nav ul li:hover {
     align-items: center;
     background: #e0e6cf;
     border: 1px solid #88a93e;
+    position: relative;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 }
 .remodal input {
     margin: 20px 0;
-    width: 240px;
+    width: 220px;
     height: 50px;
     outline: none;
     border: none;
@@ -339,7 +389,18 @@ nav ul li:hover {
     -moz-border-radius: 5px;
     border-radius: 5px;
     background: #ffffff;
+    padding-left: 5%;
+    cursor: pointer;
 }
+input::-webkit-input-placeholder {font-size: 18px;}
+input::-moz-placeholder {font-size: 18px;}
+input:-moz-placeholder {font-size: 18px;}
+input:-ms-input-placeholder {font-size: 18px;}
+input:focus::-webkit-input-placeholder {color: transparent;}
+input:focus::-moz-placeholder {color: transparent;}
+input:focus:-moz-placeholder {color: transparent;}
+input:focus:-ms-input-placeholder {color: transparent;}
+input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
 .remodal .btn {
     outline: none;
     -webkit-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
@@ -350,22 +411,52 @@ nav ul li:hover {
     border-radius: 7px;
     background: #a5bd6c;
     background: linear-gradient(to top, #a5bd6c, #c6da90);
-    border: 2px solid #e7eec1;
+    font-family: "OpenSans Bold", sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 0;
 }
-.how-to-buy {
+.remodal .btn:hover {
+    background: #c6da90;
+    background: linear-gradient(to bottom, #a5bd6c, #c6da90);
+}
+.remodal .btn:active {
+    background: #a5bd6c;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.remodal .message {
+    position: absolute;
+    bottom: 5px;
+}
+.how-to-get {
     width: 100%;
     padding: 2% 0 4%;
+    text-align: center;
 }
+.how-to-get .sub-title {text-decoration: none;}
 .get-free, .to-buy {
     width: 50%;
     float: left;
     text-align: center;
 }
-.get-free p, .to-buy p {
+.get-free p {
     text-align: left;
     display: inline-block;
     width: 80%;
     margin: 2% auto;
+    font-size: 18px;
+}
+.get-free span {
+    display: inline-block;
+    font-size: 18px;
+    text-decoration: underline;
+    margin: 10px 0;
+}
+.get-free .address {
+    font-size: 16px;
+    text-decoration: none;
 }
 .to-buy {
      float: right;
@@ -374,16 +465,63 @@ nav ul li:hover {
     display: inline-block;
     width: 50%;
     padding-top: 50%;
-    background: url('../images/sprite.png') -4% center no-repeat;
+    background: url('../images/sprite.png') -6% center no-repeat;
     background-size: cover;
-    margin: 10% 0;
+    margin: 5% 0;
 }
 .to-buy-icon {
-    background: url('../images/sprite.png') 100% center;
+    background: url('../images/sprite.png') 105% center no-repeat;
     background-size: cover;
 }
-
+.to-buy-now {
+    outline: 0;
+    border: 0;
+    width: 50%;
+    margin: 5% auto;
+    text-align: center;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background: #d88231;
+    background: linear-gradient(to top, #d88231, #ecbd32);
+    font-family: "OpenSans Bold", sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    padding: 2% 0;
+    cursor: pointer;
+}
+.to-buy-now:hover {
+    background: #ecbd32;
+    background: linear-gradient(to bottom, #d88231, #ecbd32);
+}
+.to-buy-now:active {
+    background: #d88231;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
+}
+.footer {
+    text-align: center;
+    padding: 1% 0;
+    background: #e2e3e5;
+    border-top: 2px solid #cccccc;
+}
 @media (max-width: 1600px) {
-    .taglines .text-1 {font-size: 36px;}
-    .title {font-size: 36px;}
+    .taglines .text-1 {font-size: 26px;}
+    .taglines .text-2 {font-size: 20px;}
+    nav {width: 40%;margin-top: 0.25%}
+}
+@media (max-width: 1366px) {
+    .taglines .text-1 {font-size: 22px;}
+    .taglines .text-2 {font-size: 17px;}
+    nav {margin-top: 0}
+    nav ul li a {font-size: 14px;line-height: 14px;}
+}
+@media (max-width: 1180px) {
+    .taglines .text-1 {font-size: 26px;}
+    .taglines .text-2 {font-size: 20px;}
+    .logos {width: 30%;margin-top: 0;}
+    nav {width: 5%;}
+    nav .menu-icon {display: inline-block;vertical-align: middle;}
+    nav ul {display: none;}
 }

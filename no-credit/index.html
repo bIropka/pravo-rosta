@@ -13,28 +13,29 @@
         <div class="text-2">Банкротство физических лиц: просто о сложном</div>
     </div>
     <nav>
+        <img class="menu-icon" src="images/menu.png" alt="menu-icon">
         <ul>
-            <li>О книге</li>
-            <li>Отзывы</li>
-            <li>Об авторе</li>
-            <li>Вопрос-ответ</li>
-            <li>Получить<br> консультацию</li>
-            <li>Приобрести<br> книгу</li>
+            <li><a href="#about-book">О книге</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#about-author">Об авторе</a></li>
+            <li><a href="#question-answer">Вопрос-ответ</a></li>
+            <li><a href="#remodal">Получить<br> консультацию</a></li>
+            <li><a href="#how-to-get">Приобрести<br> книгу</a></li>
         </ul>
     </nav>
     <div class="logos">
         <a href="http://www.pravo-rosta.ru/" target="_blank" class="pr-logo"></a>
-        <a href="http://www.pravo-rosta.ru/" target="_blank" class="ca-logo"></a>
+        <a href="http://www.srosoyuz.ru/" target="_blank" class="ca-logo"></a>
     </div>
     <div class="clearfix"></div>
 </div>
 
-<div class="about-book">
+<div id="about-book" class="about-book">
     <div class="content-block">
     <div class="title">О книге</div>
         <div class="you-will-learn">
-            <div class="block-picture">
-                <img src="images/freedom.jpg" alt=""/>
+            <div class="picture-block">
+                <img src="images/book-mockup.png" alt="Свобода от долгов" width="100%" height="auto">
             </div>
             <div class="block-text">
                 <div class="sub-title">В книге Вы узнаете как:</div>
@@ -96,7 +97,7 @@
     </div>
 </div>
 
-<div class="reviews">
+<div id="reviews" class="reviews">
     <div class="content-block">
         <div class="title">Отзывы</div>
         <ul>
@@ -146,11 +147,11 @@
     </div>
 </div>
 
-<div class="about-author">
+<div id="about-author" class="about-author">
     <div class="title">Об авторе</div>
     <div class="content-block">
         <div class="author-photo">
-            <img src="images/author-photo.jpg" alt=""/>
+            <img src="images/author-photo.jpg" alt="Кабурнеев Дмитрий Витальевич"/>
         </div>
         <div class="author-info">
             <p class="author-name">Кабурнеев Дмитрий Витальевич</p>
@@ -167,7 +168,7 @@
     </div>
 </div>
 
-<div class="question-answer">
+<div id="question-answer" class="question-answer">
     <div class="content-block">
         <div class="title">Вопрос-ответ</div>
         <ul>
@@ -283,7 +284,7 @@
     </div>
 </div>
 
-<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+<div id="remodal" class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
     <div class="content-block">
         <div class="title">Получить консультацию<br> по банкротству и списанию долгов у автора</div>
         <form id="form" action="mail.php">
@@ -297,38 +298,34 @@
     </div>
 </div>
 
-
-<div class="how-to-buy">
+<div id="how-to-get" class="how-to-get">
     <div class="content-block">
         <div class="title">Где купить или получить книгу</div>
         <div class="get-free">
             <div class="free-icon"></div>
             <div class="sub-title">Бесплатно</div>
             <p>
-                Если у Вас сложная финансовая ситуация
-            </p>
-            <p>
-                В офисе компании Право Роста<br>(Москва, метро Савеловская, Бумажный проезд, дом 14, стр.1
-                Управление делами Президента РФ) контакты
+                <span>Если у Вас сложная финансовая ситуация</span><br>
+                В офисе компании Право Роста<br>
+                <span class="address">Москва, метро Савеловская,<br> Бумажный проезд, дом 14, стр.1<br>
+                Управление делами Президента РФ</span>
             </p>
         </div>
         <div class="to-buy">
             <div class="to-buy-icon"></div>
-            <div class="sub-title">В книжных магазинах:</div>
-            <p>
-                address-1
-            </p>
-            <p>
-                address-2
-            </p>
-            <div class="sub-title">В Интернете:</div>
-            <a href="#">address-1</a>
-            <a href="#">address-2</a>
-            <a href="#">address-3</a>
+            <div class="sub-title">В книжных магазинах города Москвы</div>
         </div>
         <div class="clearfix"></div>
+        <button class="to-buy-now">Купить за 250 рублей онлайн</button>
     </div>
 </div>
+
+<div class="footer">
+    <div class="content-block">
+        &#169; "Свобода от долгов. Банкротство физических лиц: просто о сложном" 2016
+    </div>
+</div>
+
 
 <script src="js/jquery-2.1.4.min.js"></script>
 <script src="js/mail-script.js"></script>

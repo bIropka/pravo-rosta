@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $('.question-answer li').click(
         function() {
             var esAnswer = $(this).find('.answer');
@@ -17,4 +18,12 @@ $(document).ready(function () {
             }
 
         });
+
+    $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top - $('.header').innerHeight()}, 800);
+        return false;
+    });
+
+
 });
