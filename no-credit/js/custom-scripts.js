@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-    $('.question-answer li').click(
+    $('.question').click(
         function() {
-            var esAnswer = $(this).find('.answer');
-            var esIconArrow = $(this).find('.icon-arrow');
+            var esAnswer = $(this).parent().find('.answer');
+            var esIconArrow = $(this).parent()  .find('.icon-arrow');
             if(esAnswer.hasClass('hidden')){
                 esAnswer.removeClass('hidden');
                 esAnswer.fadeIn();
@@ -25,5 +25,25 @@ $(document).ready(function () {
         return false;
     });
 
+    $('.menu-icon').click(function() {
+        if($(this).hasClass('hidden')){
+            $('.logos').css('margin-bottom', '40px');
+            $('nav ul').fadeIn();
+            $(this).removeClass('hidden');
+        } else {
+            $('.logos').css('margin-bottom', '0');
+            $('nav ul').css('display', 'none');
+            $(this).addClass('hidden');
+        }
+    });
+
+    $('.to-buy-now').click(function () {
+        $('.window-payment').fadeIn();
+    });
+    $('.window-payment').click(function (event) {
+        $target = $(event.target);
+        if (!$target.closest($('.payment-form')).length) $('.window-payment').fadeOut();
+        if ($target.hasClass('.cancel')) $('.window-payment').fadeOut();
+    });
 
 });

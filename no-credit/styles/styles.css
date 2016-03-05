@@ -1,11 +1,6 @@
-@font-face {font-family: "Pragmatica Light";src: url("../fonts/pragmaticalightc.otf");}
 @font-face {font-family: "Europe Normal";src: url("../fonts/EuropeNormal.ttf");}
-@font-face {font-family: "Pragmatica Regular";src: url("../fonts/pragmatica-condensed.ttf");}
-@font-face {font-family: "Pragmatica Bold";src: url("../fonts/pragmaticalightc-bold.otf");}
 @font-face {font-family: "Enigma";src: url("../fonts/Enigma.TTF");}
 @font-face {font-family: "Micra Bold";src: url("../fonts/micra-bold.ttf");}
-@font-face {font-family: "OpenSans Light";src: url("../fonts/OpenSans-Light.ttf");}
-@font-face {font-family: "OpenSans Semibold";src: url("../fonts/OpenSans-Semibold.ttf");}
 @font-face {font-family: "OpenSans Regular";src: url("../fonts/OpenSans-Regular.ttf");}
 @font-face {font-family: "OpenSans Bold";src: url("../fonts/OpenSans-Bold.ttf");}
 
@@ -18,17 +13,17 @@
     font-family: "OpenSans Regular", sans-serif;
     font-size: 16px;
     color: #333333;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
     cursor: default;
 }
 a {cursor: pointer;}
 .clearfix {clear: both;}
 body {
     width: 100%;
-    background: #f9f8f8;
+    background: #ffffff;
 }
 .header {
     width: 100%;
@@ -37,8 +32,7 @@ body {
     top: 0;
     z-index: 10;
     text-align: center;
-    padding: 0.5% 0;
-    border-bottom: 2px solid #cccccc;
+    padding: 1.2% 0;
 }
 .taglines {
     display: inline-block;
@@ -61,16 +55,16 @@ body {
 }
 nav {
     display: inline-block;
-    vertical-align: top;
     width: 35%;
     margin-top: 0.6%;
 }
 .menu-icon {
     display: none;
     width: 100%;
-    height: auto;
+}
+.menu-icon img {
+    width: 100%;
     outline: none;
-    margin-top: 1%;
 }
 nav ul {
     display: flex;
@@ -80,19 +74,21 @@ nav ul {
 nav ul li {
     display: inline-block;
     width: auto;
-    cursor: pointer;
     text-align: center;
+    vertical-align: middle;
 }
 nav ul li a {
-    font-family: "Europe Normal", sans-serif;
-    font-size: 16px;
-    line-height: 18px;
+    display: block;
     text-decoration: none;
 }
-nav ul li:focus {
+nav ul li a span {
+    font-family: "Europe Normal", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+nav ul li a:hover {
     text-decoration: underline;
 }
-nav ul li:active {text-decoration: none;}
 .logos {
     display: inline-block;
     vertical-align: top;
@@ -122,13 +118,14 @@ nav ul li:active {text-decoration: none;}
     margin-top: 3%;
 }
 .content-block {
-    width: 980px;
+    width: 100%;
+    max-width: 980px;
     margin: 0 auto;
 }
 .title {
-    font-family: "Pragmatica Bold", sans-serif;
-    width: auto;
-    margin: 2% 0 3%;
+    font-family: "OpenSans Bold", sans-serif;
+    width: 90%;
+    margin: 2% 5% 3%;
     text-align: center;
     font-size: 36px;
 }
@@ -156,7 +153,7 @@ nav ul li:active {text-decoration: none;}
 .sub-title {
     font-size: 24px;
     text-decoration: underline;
-    font-family: "Pragmatica Bold", sans-serif;
+    font-family: "OpenSans Bold", sans-serif;
     margin-bottom: 5px;
 }
 .you-will-learn ul li {
@@ -177,7 +174,7 @@ nav ul li:active {text-decoration: none;}
     font-size: 18px;
     vertical-align: middle;
     margin-top: 20px;
-    font-family: "Pragmatica Bold", sans-serif;
+    font-family: "OpenSans Bold", sans-serif;
 }
 .you-will-learn .text-2 {
     display: inline-block;
@@ -188,28 +185,30 @@ nav ul li:active {text-decoration: none;}
     font-size: 14px;
 }
 .download-contents {
-    display: inline-block;
-    background: #798fb1;
-    background: linear-gradient(to top, #798fb1, #95b2e2);
+    display: block;
+    background: #285080;
+    background: linear-gradient(to top, #285080, #5B80B9);
     background-size: cover;
     font-family: "Europe Normal", sans-serif;
     font-size: 28px;
     text-decoration: none;
-    padding: 15px 20px;
-    margin: 7% 0 3% 36%;
+    padding: 15px 0;
     color: #ffffff;
     border: 1px solid #7497d0;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 10px;
     outline: none;
+    width: 400px;
+    margin: 10% auto 7%;
+    text-align: center;
 }
 .download-contents:hover {
-    background: #95b2e2;
-    background: linear-gradient(to bottom, #798fb1, #95b2e2);
+    background: #5B80B9;
+    background: linear-gradient(to bottom, #285080, #5B80B9);
 }
 .download-contents:active {
-    background: #798fb1;
+    background: #285080;
     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
@@ -219,13 +218,19 @@ nav ul li:active {text-decoration: none;}
     background: #f0f1f3;
     padding: 3% 0;
 }
-.book-can-help, .you-will-get {
-    width: 47.5%;
+.book-can-help {
+    width: 45%;
+    margin-left: 2.5%;
     float: left;
     text-align: center;
 }
 .book-can-help img, .you-will-get img {width: 65%;margin: 0 auto;height: auto;}
-.you-will-get {float: right;}
+.you-will-get {
+    width: 45%;
+    text-align: center;
+    float: right;
+    margin-right: 2.5%;
+}
 .book-can-help .sub-title, .you-will-get .sub-title {
     width: 100%;
     margin: 5% 0;
@@ -253,7 +258,6 @@ nav ul li:active {text-decoration: none;}
     width: 100%;
     position: relative;
 }
-
 .reviews ul li:first-child {margin-top: 23%;}
 .reviews ul li:last-child {margin-bottom: 15%;margin-top: 5%;}
 .reviews .author {
@@ -279,11 +283,22 @@ nav ul li:active {text-decoration: none;}
     margin-right: 12.5%;
     float: right;
     text-align: justify;
-    background: #f1f1f1;
+    background: #f9fafc;
     border: 3px solid #81a432;
-    text-indent: 5%;
+    text-indent: 7%;
     padding: 2%;
     position: relative;
+}
+.text-mark {
+    display: block;
+    width: 9%;
+    padding-top: 9%;
+    background: url('../images/text-mark.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 2%;
+    margin-top: -3%;
 }
 .reviews .review p {
     font-size: 14px;
@@ -300,13 +315,15 @@ nav ul li:active {text-decoration: none;}
 }
 .about-author .author-photo {
     width: 35%;
+    margin-left: 5%;
 }
 .about-author .author-photo img {width: 100%; height: auto;}
 .about-author .author-info {
+    width: 47%;
     margin-left: 8%;
 }
 .about-author .author-info .author-name {
-    font-family: "Pragmatica Bold", sans-serif;
+    font-family: "OpenSans Bold", sans-serif;
     font-size: 26px;
     margin-bottom: 15px;
 }
@@ -325,13 +342,13 @@ nav ul li:active {text-decoration: none;}
     border: 2px solid #d8d9db;
     border-bottom: none;
     padding: 15px 25px;
-    background: #f8f6f5;
+    background: #fafafa;
     position: relative;
 }
 .question-answer ul li:last-child {border-bottom: 2px solid #d8d9db;}
 .question-answer .question {
     font-size: 18px;
-    font-family: "Pragmatica Regular", sans-serif;
+    font-family: "OpenSans Regular", sans-serif;
     cursor: pointer;
     margin-left: 30px;
 }
@@ -360,7 +377,7 @@ nav ul li:active {text-decoration: none;}
 }
 .remodal {
     width: 100%;
-    background: #f2f3ed;
+    background: #f8f8f5;
     padding: 2% 0 4%;
 }
 .remodal form {
@@ -369,6 +386,7 @@ nav ul li:active {text-decoration: none;}
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     background: #e0e6cf;
     border: 1px solid #88a93e;
     position: relative;
@@ -377,7 +395,7 @@ nav ul li:active {text-decoration: none;}
     border-radius: 10px;
 }
 .remodal input {
-    margin: 20px 0;
+    margin: 20px 10px;
     width: 220px;
     height: 50px;
     outline: none;
@@ -391,6 +409,7 @@ nav ul li:active {text-decoration: none;}
     background: #ffffff;
     padding-left: 5%;
     cursor: pointer;
+    font-size: 18px;
 }
 input::-webkit-input-placeholder {font-size: 18px;}
 input::-moz-placeholder {font-size: 18px;}
@@ -403,25 +422,25 @@ input:focus:-ms-input-placeholder {color: transparent;}
 input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
 .remodal .btn {
     outline: none;
-    -webkit-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
-    -moz-box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
-    box-shadow: inset 0 0 10px 0 rgba(136,169,62,1), 0 0 5px 0 rgba(0,0,0, 0.5);
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    background: #a5bd6c;
-    background: linear-gradient(to top, #a5bd6c, #c6da90);
+    background: rgba(152, 188, 69, 0.8);
+    background: linear-gradient(to top, rgba(152, 188, 69, 0.8), rgba(193, 239, 88, 0.8));
     font-family: "OpenSans Bold", sans-serif;
     font-size: 18px;
-    color: #ffffff;
+    color: #333333;
     padding: 0;
+    -webkit-box-shadow: 0 3px 10px 0 #546927;
+    -moz-box-shadow: 0 3px 10px 0 #546927;
+    box-shadow: 0 3px 10px 0 #546927;
 }
 .remodal .btn:hover {
-    background: #c6da90;
-    background: linear-gradient(to bottom, #a5bd6c, #c6da90);
+    background: rgba(193, 239, 88, 0.8);
+    background: linear-gradient(to bottom, rgba(152, 188, 69, 0.8), rgba(193, 239, 88, 0.8));
 }
 .remodal .btn:active {
-    background: #a5bd6c;
+    background: rgba(152, 188, 69, 0.8);
     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
@@ -482,8 +501,8 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
     border-radius: 7px;
-    background: #d88231;
-    background: linear-gradient(to top, #d88231, #ecbd32);
+    background: #C75300;
+    background: linear-gradient(to top, #C75300, #FF9A47);
     font-family: "OpenSans Bold", sans-serif;
     font-size: 24px;
     color: #ffffff;
@@ -491,21 +510,48 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     cursor: pointer;
 }
 .to-buy-now:hover {
-    background: #ecbd32;
-    background: linear-gradient(to bottom, #d88231, #ecbd32);
+    background: #FF9A47;
+    background: linear-gradient(to bottom, #C75300, #FF9A47);
 }
 .to-buy-now:active {
-    background: #d88231;
+    background: #C75300;
     -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7);
 }
 .footer {
     text-align: center;
-    padding: 1% 0;
+    padding: 2% 0;
     background: #e2e3e5;
-    border-top: 2px solid #cccccc;
 }
+/*  payment form  */
+.window-payment {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    text-align: left;
+    z-index: 10;
+}
+.payment-form {
+    position: absolute;
+    width: 470px;
+    height: 400px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #096ec8, #084f8f);
+    text-align: center;
+    padding: 0 30px;
+    outline: 10px solid white;
+    z-index: 10;
+}
+/*  media queries */
 @media (max-width: 1600px) {
     .taglines .text-1 {font-size: 26px;}
     .taglines .text-2 {font-size: 20px;}
@@ -514,14 +560,97 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
 @media (max-width: 1366px) {
     .taglines .text-1 {font-size: 22px;}
     .taglines .text-2 {font-size: 17px;}
-    nav {margin-top: 0}
     nav ul li a {font-size: 14px;line-height: 14px;}
 }
 @media (max-width: 1180px) {
     .taglines .text-1 {font-size: 26px;}
     .taglines .text-2 {font-size: 20px;}
-    .logos {width: 30%;margin-top: 0;}
+    .logos {width: 30%;}
     nav {width: 5%;}
-    nav .menu-icon {display: inline-block;vertical-align: middle;}
-    nav ul {display: none;}
+    nav .menu-icon {display: inline-block;margin-top: 5px;}
+    nav ul {
+        display: none;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position:absolute;
+        bottom: 10px;
+        border-top: 1px solid #cccccc;
+        padding-top: 5px;
+    }
+    nav ul li {
+        margin-right: 2%;
+    }
+}
+@media (max-width: 980px) {
+    .taglines .text-1 {font-size: 22px;}
+    .taglines .text-2 {font-size: 17px;}
+    .title {font-size: 28px;}
+    .remodal .btn {margin-top: 0;}
+    .question-answer .icon-arrow {top: 5px;}
+}
+@media (max-width: 768px) {
+    .sub-title {font-size: 18px;}
+    .you-will-learn .text-1 {font-size: 14px;}
+    .taglines {float: right;margin: 1% 0 2% 5%;}
+    .logos {float: right;width: 40%;margin-right: 5%;}
+    nav {
+        display: inline-block;
+        vertical-align:top;
+        width: 15%;
+        float: left;
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    nav ul {bottom: 5px;}
+    .about-book {margin-top: 15%;}
+    .you-will-learn {margin-top: 10%;}
+    .question-answer .question {font-size: 16px;}
+    .reviews ul {background: none;}
+    .reviews ul li:first-child {margin-top: 5%;}
+    .reviews ul li:last-child {margin: 5% 0;}
+    .reviews .author {margin-left: 7.5%;}
+    .reviews .review {margin-right: 7.5%;}
+    .question-answer .icon-arrow {width: 32px; padding-top: 30px;top:10px;}
+    .question-answer .to-right {
+        background: url('../images/arrow-sprite.png') -1% center no-repeat;
+        background-size: cover;
+    }
+    .question-answer .to-bottom {
+        background: url('../images/arrow-sprite.png') 101% center no-repeat;
+        background-size: cover;
+    }
+    .question-answer ul {width: 90%;}
+    .remodal input {
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+    input::-webkit-input-placeholder {font-size: 14px;}
+    input::-moz-placeholder {font-size: 14px;}
+    input:-moz-placeholder {font-size: 14px;}
+    input:-ms-input-placeholder {font-size: 14px;}
+    .remodal .btn {font-size: 14px;}
+    .download-contents {width: 300px; font-size: 18px;}
+    .to-buy-now {font-size: 18px;}
+    .about-author .author-info .author-name {font-size: 20px;}
+    .about-author .author-info p {line-height: 22px;}
+}
+@media (max-width: 640px) {
+    * {font-size: 12px;}
+    nav ul li a {font-size: 12px;}
+    .title {font-size: 20px;}
+    .get-free p, .get-free span, .get-free .address {font-size: 12px;}
+    .question-answer .question {font-size: 14px;margin-left: 10px;}
+    .reviews .review {width: 50%;font-size: 12px;}
+    .reviews .review p {font-size: 12px;}
+    .you-will-learn .text-1, .you-will-learn .text-2 {font-size: 12px;}
+    .sub-title {font-size: 16px;}
+    .about-author .author-info .author-name {font-size: 16px;}
+    .about-author .author-info p {line-height: 20px;}
+    .remodal .btn {margin: 20px 10px;}
+    .taglines .text-1 {font-size: 18px;}
+    .taglines .text-2 {font-size: 14px;}
+    .to-buy-now {font-size: 16px; width: 60%;}
 }
