@@ -50,4 +50,6 @@ $(document).ready(function () {
         $('.you-will-learn .picture-block').fadeIn(3000);
     },1500);
 
+    $('.putPhone').mask("+7 (999) 999-99-99");
+
 });

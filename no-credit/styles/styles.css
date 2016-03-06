@@ -116,6 +116,7 @@ nav ul li a:hover {
 .about-book {
     padding: 3% 0 0;
     margin-top: 3%;
+    text-align: center;
 }
 .content-block {
     width: 100%;
@@ -186,12 +187,12 @@ nav ul li a:hover {
     font-size: 14px;
 }
 .download-contents {
-    display: block;
+    display: inline-block;
     background: #285080;
     background: linear-gradient(to top, #285080, #5B80B9);
     background-size: cover;
-    font-family: "Europe Normal", sans-serif;
-    font-size: 28px;
+    font-family: "OpenSans Bold", sans-serif;
+    font-size: 24px;
     text-decoration: none;
     padding: 15px 0;
     color: #ffffff;
@@ -201,7 +202,7 @@ nav ul li a:hover {
     border-radius: 10px;
     outline: none;
     width: 400px;
-    margin: 10% auto 7%;
+    margin: 10% 25px 7% 0;
     text-align: center;
 }
 .download-contents:hover {
@@ -278,10 +279,6 @@ nav ul li a:hover {
     margin-left: 10px;
     font-family: "OpenSans Bold", sans-serif;
     line-height: 22px;
-}
-.reviews .author .info a {
-    display:inline-block;
-    font-family: "OpenSans Bold", sans-serif;
 }
 .reviews .review {
     display: inline-block;
@@ -500,10 +497,11 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     background-size: cover;
 }
 .to-buy-now {
+    display: inline-block;
     outline: 0;
     border: 0;
-    width: 50%;
-    margin: 5% auto;
+    width: 400px;
+    margin: 10% 0 7%;
     text-align: center;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -513,7 +511,7 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     font-family: "OpenSans Bold", sans-serif;
     font-size: 24px;
     color: #ffffff;
-    padding: 2% 0;
+    padding: 15px 0;
     cursor: pointer;
 }
 .to-buy-now:hover {
@@ -597,6 +595,8 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     .remodal .btn {margin-top: 0;}
     .question-answer .icon-arrow {top: 5px;}
     .text-mark {margin-top: -10px;}
+    .download-contents {margin: 5% 5% 0 5%;}
+    .to-buy-now {margin: 5%;}
 }
 @media (max-width: 768px) {
     .sub-title {font-size: 18px;}
@@ -640,8 +640,6 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     input:-moz-placeholder {font-size: 14px;}
     input:-ms-input-placeholder {font-size: 14px;}
     .remodal .btn {font-size: 14px;}
-    .download-contents {width: 300px; font-size: 18px;}
-    .to-buy-now {font-size: 18px;}
     .about-author .author-info .author-name {font-size: 20px;}
     .about-author .author-info p {line-height: 22px;}
 }
@@ -661,7 +659,6 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     .remodal .btn {margin: 20px 10px;}
     .taglines .text-1 {font-size: 18px;}
     .taglines .text-2 {font-size: 14px;}
-    .to-buy-now {font-size: 16px; width: 60%;}
     .text-mark {display: none;}
 }
 @media (max-width: 540px) {
@@ -700,4 +697,5 @@ input:focus {box-shadow:none;border: 1px solid rgba(136,169,62,1);}
     .reviews .author {margin-left: 5px;}
     .reviews .author .info {margin-left: 8px;line-height: 16px;}
     .reviews .review {width:60%;margin-right: 5px;}
+    .download-contents, .to-buy-now {width: 300px;font-size: 16px;}
 }
